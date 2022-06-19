@@ -1,23 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Menu">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
         android:orientation="vertical"
         android:gravity="center">
+
+        <TextView
+            android:id="@+id/miPuntuacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:text="@string/MiPuntuaciontxt"/>
+
+        <TextView
+            android:id="@+id/balon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:text="@string/balon"/>
+
+        <ImageView
+            android:id="@+id/imagenMenu"
+            android:layout_marginTop="10dp"
+
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/balon"/>
+
+        <TextView
+            android:id="@+id/uidMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="@string/uidMenu"/>
+
+        <TextView
+            android:id="@+id/correoMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:text="@string/correoMenu"/>
+
+        <TextView
+            android:id="@+id/nombreMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:text="@string/nombreMenu"/>
+
+        <TextView
+            android:id="@+id/Menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:text="@string/Menutxt"/>
+
+        <Button
+            android:id="@+id/btnJugar"
+            android:text="@string/Jugar"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boton_personalizado"/>
+
+        <Button
+            android:id="@+id/btnPuntuacion"
+            android:text="@string/Puntuaciones"
+            android:background="@drawable/boton_personalizado"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnAbout"
+            android:text="@string/About"
+            android:background="@drawable/boton_personalizado"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/btnCerrarSesion"
             android:text="@string/btnCerrarSesion"
+            android:background="@drawable/boton_personalizado"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
 
-</RelativeLayout>
+</ScrollView>

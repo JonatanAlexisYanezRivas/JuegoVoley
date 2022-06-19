@@ -13,5 +13,18 @@
     <string name="passwordLogin">Contraseña</string>
     <string name="loginBtn">Ingresar</string>
     <!--Menu-->
+    <string name="MiPuntuaciontxt">Mi puntuación</string>
+    <string name="balon">--</string>
+    <string name="uidMenu">--</string>
+    <string name="correoMenu">--</string>
+    <string name="nombreMenu">--</string>
+    <string name="Menutxt">Menú</string>
     <string name="btnCerrarSesion">Cerrar sesión</string>
+    <string name="Jugar">Jugar</string>
+    <string name="Puntuaciones">Puntuaciones</string>
+    <string name="About">Acerca de</string>
+    <!--Menu-->
+    <string name="score">Mi puntuación: 0</string>
+    <string name="nombreJuego">--</string>
+
 </resources>
