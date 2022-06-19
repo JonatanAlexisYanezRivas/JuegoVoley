@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "754303232958",
+    "project_id": "juego-voley",
+    "storage_bucket": "juego-voley.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754303232958:android:aeaad4b8b1ed69229027ef",
+        "android_client_info": {
+          "package_name": "com.tesoem.juegovoley"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "754303232958-vnamht0mu558ei7kgd9l2a0469ssc3a6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tesoem.juegovoley",
+            "certificate_hash": "747b9e5dfa22f7aa1a1f1f6c988210805e459876"
+          }
+        },
+        {
+          "client_id": "754303232958-90lrensi55c5i2lap4n0cd3rj0mcesee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxB34c3-4JzFDeGMXPDHFQa5jIxsRZ-VM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "754303232958-90lrensi55c5i2lap4n0cd3rj0mcesee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

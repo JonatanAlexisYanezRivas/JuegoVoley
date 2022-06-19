@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">JuegoVoley</string>
+    <string name="btnLogin">Login</string>
+    <string name="btnRegistro">Registro</string>
+    <!--Registro-->
+    <string name="correoEt">Correo electrónico</string>
+    <string name="passEt">Contraseña</string>
+    <string name="nombreEt">Nombre</string>
+    <string name="fechaEt">Fecha</string>
+    <string name="Registrar">Registrar</string>
+    <!--Login-->
+    <string name="correoLogin">Correo electrónico</string>
+    <string name="passwordLogin">Contraseña</string>
+    <string name="loginBtn">Ingresar</string>
+    <!--Menu-->
+    <string name="btnCerrarSesion">Cerrar sesión</string>
+</resources>
