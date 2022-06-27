@@ -326,6 +326,8 @@ public class Juego extends AppCompatActivity {
                     if(movement.getMovEnemigo()!= movement.getObj() && contRemate == 1){
                         Toast.makeText(Juego.this, "Perdisteee, tremendo manco, sino es dificil", Toast.LENGTH_SHORT).show();
 
+                        contGanadas = 0;
+
                         j1.setChecked(false);
                         j2.setChecked(false);
                         j3.setChecked(false);
@@ -345,6 +347,8 @@ public class Juego extends AppCompatActivity {
 
                 }else{
                     Toast.makeText(Juego.this, "Se han terminado tus 3 movimientos vuelve a intentarlo", Toast.LENGTH_SHORT).show();
+
+                    contGanadas = 0;
 
                     j1.setChecked(false);
                     j2.setChecked(false);
@@ -643,7 +647,6 @@ public class Juego extends AppCompatActivity {
 
         contMov = 0;
         contRemate = 0;
-        contGanadas = 0;
 
         puntuacion.setText("Puntuación: " + String.valueOf(contGanadas));
 
