@@ -74,7 +74,7 @@ public class Menu extends AppCompatActivity {
 
                 intent.putExtra("UID", uidString);
                 intent.putExtra("NOMBRE", nombreString);
-                intent.putExtra("SCORE", "Puntuación: " + puntuacionString);
+                intent.putExtra("SCORE", puntuacionString);
 
                 startActivity(intent);
 

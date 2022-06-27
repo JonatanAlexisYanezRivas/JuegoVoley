@@ -26,5 +26,13 @@
     <!--Menu-->
     <string name="score">Mi puntuación: 0</string>
     <string name="nombreJuego">--</string>
+    <!--Jugadores-->
+    <string name="jg1">jg1</string>
+    <string name="jg2">jg2</string>
+    <string name="jg3">jg3</string>
+    <string name="jg4">jg4</string>
+    <string name="jg5">jg5</string>
+    <string name="jg6">jg6</string>
+
 
 </resources>

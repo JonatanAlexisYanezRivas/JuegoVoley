@@ -54,156 +54,178 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <RadioButton
+    <CheckBox
         android:id="@+id/jg1"
-        android:layout_width="61dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="72dp"
-        android:layout_marginEnd="278dp"
-        android:layout_marginBottom="72dp"
-        android:text="jg1" />
+        android:layout_marginStart="57dp"
+        android:layout_marginBottom="144dp"
+        android:checked="false"
+        android:onClick="movements"
+        android:text="@string/jg1" />
 
-    <RadioButton
-        android:id="@+id/en6"
-        android:layout_width="61dp"
+    <CheckBox
+        android:id="@+id/jg2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="272dp"
-        android:layout_marginEnd="78dp"
-        android:layout_marginBottom="572dp"
-        android:text="en6" />
-
-    <RadioButton
-        android:id="@+id/en5"
-        android:layout_width="61dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="178dp"
-        android:layout_marginEnd="172dp"
-        android:layout_marginBottom="572dp"
-        android:text="en5" />
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="145dp"
+        android:onClick="movements"
+        android:text="@string/jg2" />
 
-    <RadioButton
+    <CheckBox
+        android:id="@+id/jg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="148dp"
+        android:onClick="movements"
+        android:text="@string/jg3" />
+
+    <CheckBox
         android:id="@+id/jg4"
-        android:layout_width="61dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="74dp"
-        android:layout_marginEnd="276dp"
-        android:layout_marginBottom="169dp"
-        android:text="jg4" />
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="195dp"
+        android:onClick="movements"
+        android:text="@string/jg4" />
 
-    <RadioButton
-        android:id="@+id/en4"
-        android:layout_width="61dp"
+    <CheckBox
+        android:id="@+id/jg5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="72dp"
-        android:layout_marginEnd="278dp"
-        android:layout_marginBottom="578dp"
-        android:text="en4" />
+        android:layout_marginEnd="154dp"
+        android:layout_marginBottom="196dp"
+        android:onClick="movements"
+        android:text="@string/jg5" />
 
-    <RadioButton
-        android:id="@+id/en1"
-        android:layout_width="61dp"
+    <CheckBox
+        android:id="@+id/jg6"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="76dp"
-        android:layout_marginEnd="274dp"
-        android:layout_marginBottom="506dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="196dp"
+        android:onClick="movements"
+        android:text="@string/jg6" />
+
+    <CheckBox
+        android:id="@+id/en1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="193dp"
+        android:onClick="movementsEnemy"
         android:text="en1" />
 
-    <RadioButton
+    <CheckBox
         android:id="@+id/en2"
-        android:layout_width="61dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="178dp"
-        android:layout_marginEnd="172dp"
-        android:layout_marginBottom="505dp"
+        android:layout_marginTop="193dp"
+        android:onClick="movementsEnemy"
         android:text="en2" />
 
-    <RadioButton
+    <CheckBox
         android:id="@+id/en3"
-        android:layout_width="61dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="273dp"
-        android:layout_marginEnd="77dp"
-        android:layout_marginBottom="504dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="62dp"
+        android:onClick="movementsEnemy"
         android:text="en3" />
 
-    <RadioButton
-        android:id="@+id/jg2"
-        android:layout_width="61dp"
+    <CheckBox
+        android:id="@+id/en4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="153dp"
+        android:onClick="movementsEnemy"
+        android:text="en4" />
+
+    <CheckBox
+        android:id="@+id/en5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="179dp"
-        android:layout_marginEnd="171dp"
-        android:layout_marginBottom="72dp"
-        android:text="jg2" />
+        android:layout_marginTop="151dp"
+        android:onClick="movementsEnemy"
+        android:text="en5" />
 
-    <RadioButton
-        android:id="@+id/jg3"
-        android:layout_width="61dp"
+    <CheckBox
+        android:id="@+id/en6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="162dp"
+        android:layout_marginEnd="59dp"
+        android:onClick="movementsEnemy"
+        android:text="en6" />
+
+    <Button
+        android:id="@+id/btnPase"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="270dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="72dp"
-        android:text="jg3" />
+        android:layout_marginStart="86dp"
+        android:layout_marginBottom="106dp"
+        android:text="Pase" />
 
-    <RadioButton
-        android:id="@+id/jg5"
-        android:layout_width="61dp"
+    <Button
+        android:id="@+id/btnAcomodo"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="180dp"
-        android:layout_marginEnd="170dp"
-        android:layout_marginBottom="169dp"
-        android:text="jg5" />
+        android:layout_marginStart="81dp"
+        android:layout_marginBottom="58dp"
+        android:text="acomodo" />
 
-    <RadioButton
-        android:id="@+id/jg6"
-        android:layout_width="61dp"
+    <Button
+        android:id="@+id/btnRemate"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="269dp"
-        android:layout_marginEnd="81dp"
-        android:layout_marginBottom="168dp"
-        android:text="jg6" />
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="103dp"
+        android:text="remate" />
+
+    <Button
+        android:id="@+id/btnConfirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="58dp"
+        android:text="Confirmar" />
 
 
 </RelativeLayout>

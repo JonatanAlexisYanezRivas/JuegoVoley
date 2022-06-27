@@ -19,18 +19,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textSize="25sp"
             android:gravity="center"
-            android:text="@string/MiPuntuaciontxt"/>
+            android:text="@string/MiPuntuaciontxt"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/balon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textSize="25sp"
             android:gravity="center"
-            android:text="@string/balon"/>
+            android:text="@string/balon"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
 
         <ImageView
             android:id="@+id/imagenMenu"
@@ -45,36 +47,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textSize="20sp"
             android:gravity="center"
-            android:text="@string/uidMenu"/>
+            android:text="@string/uidMenu"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/correoMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textSize="25sp"
             android:gravity="center"
-            android:text="@string/correoMenu"/>
+            android:text="@string/correoMenu"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/nombreMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textSize="25sp"
             android:gravity="center"
-            android:text="@string/nombreMenu"/>
+            android:text="@string/nombreMenu"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/Menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textSize="25sp"
             android:gravity="center"
-            android:text="@string/Menutxt"/>
+            android:text="@string/Menutxt"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/btnJugar"
