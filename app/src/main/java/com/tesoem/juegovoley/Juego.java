@@ -865,7 +865,7 @@ public class Juego extends AppCompatActivity {
         JUGADORES.child(user.getUid()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(Juego.this, "Nuevo record", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Juego.this, "Nuevo record ", Toast.LENGTH_SHORT).show();
             }
         });
     }
