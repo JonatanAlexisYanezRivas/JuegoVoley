@@ -13,7 +13,7 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        int DURACION_SPLASH = 1500;
+        int DURACION_SPLASH = 3000;
         //Mostrar ventana por 1.5S
         new Handler().postDelayed(new Runnable() {
             @Override

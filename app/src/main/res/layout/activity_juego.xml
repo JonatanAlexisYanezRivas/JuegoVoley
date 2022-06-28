@@ -55,48 +55,14 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <CheckBox
-        android:id="@+id/jg1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="57dp"
-        android:layout_marginBottom="144dp"
-        android:checked="false"
-        android:onClick="movements"
-        android:text="@string/jg1" />
-
-    <CheckBox
-        android:id="@+id/jg2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="145dp"
-        android:onClick="movements"
-        android:text="@string/jg2" />
-
-    <CheckBox
-        android:id="@+id/jg3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="148dp"
-        android:onClick="movements"
-        android:text="@string/jg3" />
-
-    <CheckBox
         android:id="@+id/jg4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="64dp"
-        android:layout_marginBottom="195dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginBottom="273dp"
+        android:buttonTint="@color/purple_200"
         android:onClick="movements"
         android:text="@string/jg4" />
 
@@ -107,8 +73,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginEnd="154dp"
-        android:layout_marginBottom="196dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="274dp"
+        android:buttonTint="@color/purple_200"
         android:onClick="movements"
         android:text="@string/jg5" />
 
@@ -118,53 +85,49 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="196dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="271dp"
+        android:buttonTint="@color/purple_200"
         android:onClick="movements"
         android:text="@string/jg6" />
 
     <CheckBox
-        android:id="@+id/en1"
+        android:id="@+id/jg2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="193dp"
-        android:onClick="movementsEnemy"
-        android:text="en1" />
-
-    <CheckBox
-        android:id="@+id/en2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="193dp"
-        android:onClick="movementsEnemy"
-        android:text="en2" />
-
-    <CheckBox
-        android:id="@+id/en3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="196dp"
-        android:layout_marginEnd="62dp"
-        android:onClick="movementsEnemy"
-        android:text="en3" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="179dp"
+        android:layout_marginBottom="186dp"
+        android:buttonTint="@color/purple_200"
+        android:onClick="movements"
+        android:text="@string/jg2" />
 
     <CheckBox
-        android:id="@+id/en4"
+        android:id="@+id/jg1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="153dp"
-        android:onClick="movementsEnemy"
-        android:text="en4" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="82dp"
+        android:layout_marginBottom="185dp"
+        android:buttonTint="@color/purple_200"
+        android:checked="false"
+        android:onClick="movements"
+        android:text="@string/jg1" />
+
+    <CheckBox
+        android:id="@+id/jg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="190dp"
+        android:buttonTint="@color/purple_200"
+        android:onClick="movements"
+        android:text="@string/jg3" />
 
     <CheckBox
         android:id="@+id/en5"
@@ -172,9 +135,45 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="151dp"
+        android:layout_marginTop="99dp"
+        android:buttonTint="#ff0000"
         android:onClick="movementsEnemy"
         android:text="en5" />
+
+    <CheckBox
+        android:id="@+id/en3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="153dp"
+        android:layout_marginEnd="97dp"
+        android:buttonTint="#ff0000"
+        android:onClick="movementsEnemy"
+        android:text="en3" />
+
+    <CheckBox
+        android:id="@+id/en2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="149dp"
+        android:buttonTint="#ff0000"
+        android:onClick="movementsEnemy"
+        android:text="en2" />
+
+    <CheckBox
+        android:id="@+id/en1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="153dp"
+        android:buttonTint="#ff0000"
+        android:onClick="movementsEnemy"
+        android:text="en1" />
 
     <CheckBox
         android:id="@+id/en6"
@@ -182,39 +181,56 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="162dp"
-        android:layout_marginEnd="59dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="95dp"
+        android:buttonTint="#ff0000"
         android:onClick="movementsEnemy"
         android:text="en6" />
+
+    <CheckBox
+        android:id="@+id/en4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="101dp"
+        android:buttonTint="#ff0000"
+        android:onClick="movementsEnemy"
+        android:text="en4" />
 
     <Button
         android:id="@+id/btnPase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/boton_personalizado"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="86dp"
-        android:layout_marginBottom="106dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginBottom="113dp"
         android:text="Pase" />
 
     <Button
         android:id="@+id/btnAcomodo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/boton_personalizado"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="81dp"
-        android:layout_marginBottom="58dp"
+        android:layout_marginStart="251dp"
+        android:layout_marginBottom="109dp"
         android:text="acomodo" />
 
     <Button
         android:id="@+id/btnRemate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/boton_personalizado"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="91dp"
-        android:layout_marginBottom="103dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="167dp"
+        android:layout_marginBottom="112dp"
         android:text="remate" />
 
     <Button
@@ -223,8 +239,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="71dp"
-        android:layout_marginBottom="58dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="61dp"
+        android:background="@drawable/boton_personalizado"
         android:text="Confirmar" />
 
 

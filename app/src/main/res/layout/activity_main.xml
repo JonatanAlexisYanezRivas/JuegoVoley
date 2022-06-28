@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#356E00"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -14,10 +14,17 @@
         android:orientation="vertical"
         android:padding="10dp">
 
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/logo"
+            android:layout_marginBottom="10dp"
+            />
+
         <Button
             android:id="@+id/btnLogin"
             android:text="@string/btnLogin"
-            android:backgroundTint="#D4FBAF"
+            android:background="@drawable/boton_personalizado"
             android:textColor="@color/black"
             app:cornerRadius="20dp"
             android:layout_width="match_parent"
@@ -26,7 +33,7 @@
         <Button
             android:id="@+id/btnRegistro"
             android:text="@string/btnRegistro"
-            android:backgroundTint="#D4FBAF"
+            android:background="@drawable/boton_personalizado"
             android:textColor="@color/black"
             android:layout_marginTop="10dp"
             app:cornerRadius="20dp"

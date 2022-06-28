@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">JuegoVoley</string>
+    <string name="textSplash">Juego lógico de Voley</string>
     <string name="btnLogin">Login</string>
     <string name="btnRegistro">Registro</string>
     <!--Registro-->
@@ -33,6 +34,14 @@
     <string name="jg4">jg4</string>
     <string name="jg5">jg5</string>
     <string name="jg6">jg6</string>
-
-
+    <!--Instrucciones-->
+    <string name="instruccioes">Instrucciones</string>
+    <string name="pase">Pase</string>
+    <string name="acomodo">Acomodo</string>
+    <string name="remate">Remate</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="paseTexto">El pase nos permite mover el balón una casilla, en las direcciones izquierda, derecha, atras y adelante dependiendo de donde se encuentre el balón.</string>
+    <string name="acomodoTexto">El acomodo nos permite mover el balón dos casillas a los lados ó de forma diagonal hacía atras y adelante dependiendo de donde se encuentre el balón</string>
+    <string name="remateTexto">El remate nos permite mover el balón dos casillas hacia enfrente ó una casilla diagonal hacia enfrente. El remate tiene una restricción y es que no se puede mover el balón a tu cancha con este movimiento.</string>
+    <string name="confirmarTexto">Será necesario confirmar tu movimiento para realizar alguna acción</string>
 </resources>

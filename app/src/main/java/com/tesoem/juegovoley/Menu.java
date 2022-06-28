@@ -43,7 +43,7 @@ public class Menu extends AppCompatActivity {
         JUGADORES = firebaseDatabase.getReference("DB JUGADORES");
 
         btnJugar = findViewById(R.id.btnJugar);
-        btnPuntuaciones = findViewById(R.id.btnPuntuacion);
+       // btnPuntuaciones = findViewById(R.id.btnPuntuacion);
         btnAbout = findViewById(R.id.btnAbout);
 
         miPuntuacion = findViewById(R.id.balon);
@@ -82,17 +82,17 @@ public class Menu extends AppCompatActivity {
             }
         });
         
-        btnPuntuaciones.setOnClickListener(new View.OnClickListener() {
+        /*btnPuntuaciones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(Menu.this, "Puntuaciones", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
         
         btnAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Menu.this, "About", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Menu.this, Instrucciones.class));
             }
         });
     }

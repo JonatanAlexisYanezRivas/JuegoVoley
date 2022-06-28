@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/black"
     tools:context=".Login">
 
     <LinearLayout
@@ -14,6 +14,14 @@
         android:padding="10dp"
         android:gravity="center">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:text="LOGIN"
+            android:gravity="center"/>
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -22,6 +30,9 @@
                 android:id="@+id/correoLogin"
                 android:hint="@string/correoLogin"
                 android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
                 android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -38,6 +49,9 @@
                 android:id="@+id/passwordLogin"
                 android:hint="@string/passwordLogin"
                 android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
                 android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -49,7 +63,8 @@
 
         <Button
             android:id="@+id/loginBtn"
-            android:hint="@string/loginBtn"
+            android:background="@drawable/boton_personalizado"
+           android:text="@string/loginBtn"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

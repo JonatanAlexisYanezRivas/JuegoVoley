@@ -43,6 +43,15 @@
             android:src="@drawable/balon"/>
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="UID:"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
             android:id="@+id/uidMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,7 +69,7 @@
             android:gravity="center"
             android:text="@string/correoMenu"
             android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/nombreMenu"
@@ -70,7 +79,7 @@
             android:gravity="center"
             android:text="@string/nombreMenu"
             android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/Menu"
@@ -90,6 +99,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/boton_personalizado"/>
 
+        <!--
         <Button
             android:id="@+id/btnPuntuacion"
             android:text="@string/Puntuaciones"
@@ -97,6 +107,7 @@
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+         -->
 
         <Button
             android:id="@+id/btnAbout"

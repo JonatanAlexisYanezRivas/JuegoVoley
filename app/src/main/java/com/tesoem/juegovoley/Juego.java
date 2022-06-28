@@ -3,6 +3,7 @@ package com.tesoem.juegovoley;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -49,7 +50,7 @@ public class Juego extends AppCompatActivity {
 
         puntuacion = findViewById(R.id.scoreJuego);
         nombre = findViewById(R.id.nombreJuego);
-
+    //Datos obtenidos de menu
         Bundle intent = getIntent().getExtras();
 
         uidS = intent.getString("UID");
@@ -58,14 +59,12 @@ public class Juego extends AppCompatActivity {
 
         puntuacion.setText("Puntuación: " + String.valueOf(contGanadas));
         nombre.setText(nombreS);
-
+    //Base de datos
         firebaseAuth = FirebaseAuth.getInstance();
         user = firebaseAuth.getCurrentUser();
         firebaseDatabase = FirebaseDatabase.getInstance();
         JUGADORES = firebaseDatabase.getReference("DB JUGADORES");
-
-
-
+    //Referencia a juagdores
         j1 = findViewById(R.id.jg1);
         j2 = findViewById(R.id.jg2);
         j3 = findViewById(R.id.jg3);
@@ -79,7 +78,7 @@ public class Juego extends AppCompatActivity {
         e4 = findViewById(R.id.en4);
         e5 = findViewById(R.id.en5);
         e6 = findViewById(R.id.en6);
-
+    //referencia a botones
         btnAcomodo = findViewById(R.id.btnAcomodo);
         btnPase = findViewById(R.id.btnPase);
         btnRemate = findViewById(R.id.btnRemate);
@@ -87,89 +86,7 @@ public class Juego extends AppCompatActivity {
 
         start();
 
-        /*Random random = new Random();
-        int balon = random.nextInt(0 + 7);
-        int objectivo = random.nextInt(0 + 7);
-
-        movement.setMovJugador(balon);
-        movement.setObj(objectivo);
-
-        if(balon == 1){
-            j1.setText("Balón");
-            j1.setTextColor(Color.parseColor("#00e059"));
-            j1.setChecked(true);
-            j1.setEnabled(false);
-        }
-        if(balon == 2){
-            j2.setText("Balón");
-            j2.setTextColor(Color.parseColor("#00e059"));
-            j2.setChecked(true);
-            j2.setEnabled(false);
-        }
-        if(balon == 3){
-            j3.setText("Balón");
-            j3.setTextColor(Color.parseColor("#00e059"));
-            j3.setChecked(true);
-            j3.setEnabled(false);
-        }
-        if(balon == 4){
-            j4.setText("Balón");
-            j4.setTextColor(Color.parseColor("#00e059"));
-            j4.setChecked(true);
-            j4.setEnabled(false);
-        }
-        if(balon == 5){
-            j5.setText("Balón");
-            j5.setTextColor(Color.parseColor("#00e059"));
-            j5.setChecked(true);
-            j5.setEnabled(false);
-        }
-        if(balon == 6){
-            j6.setText("Balón");
-            j6.setTextColor(Color.parseColor("#00e059"));
-            j6.setChecked(true);
-            j6.setEnabled(false);
-        }
-
-        if(objectivo == 1){
-            e1.setText("Punto");
-            e1.setTextColor(Color.parseColor("#ff0000"));
-            e1.setChecked(true);
-            e1.setEnabled(false);
-        }
-        if(objectivo == 2){
-            e2.setText("Punto");
-            e2.setTextColor(Color.parseColor("#ff0000"));
-            e2.setChecked(true);
-            e2.setEnabled(false);
-        }
-        if(objectivo == 3){
-            e3.setText("Punto");
-            e3.setTextColor(Color.parseColor("#ff0000"));
-            e3.setChecked(true);
-            e3.setEnabled(false);
-        }
-        if(objectivo == 4){
-            e4.setText("Punto");
-            e4.setTextColor(Color.parseColor("#ff0000"));
-            e4.setChecked(true);
-            e4.setEnabled(false);
-        }
-        if(objectivo == 5){
-            e5.setText("Punto");
-            e5.setTextColor(Color.parseColor("#ff0000"));
-            e5.setChecked(true);
-            e5.setEnabled(false);
-        }
-        if(objectivo == 6){
-            e6.setText("Punto");
-            e6.setTextColor(Color.parseColor("#ff0000"));
-            e6.setChecked(true);
-            e6.setEnabled(false);
-        }*/
-
-
-
+    //Confirmar movimiento
         btnConfirmar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -177,7 +94,6 @@ public class Juego extends AppCompatActivity {
 
                 contMov++;
                 if(contMov <=3 ){
-
                     if(movement.getMovJugador() == 1){
                         j1.setText("Balón");
                         j2.setText("jg2");
@@ -196,9 +112,10 @@ public class Juego extends AppCompatActivity {
                         j5.setChecked(false);
                         j6.setChecked(false);
 
+
+
                         //  j1.setEnabled(false);
                     }
-
                     if(movement.getMovJugador() == 2){
                         j2.setText("Balón");
                         j1.setText("jg1");
@@ -217,7 +134,6 @@ public class Juego extends AppCompatActivity {
 
                         //  j2.setEnabled(false);
                     }
-
                     if(movement.getMovJugador() == 3){
                         j3.setText("Balón");
                         j2.setText("jg2");
@@ -236,7 +152,6 @@ public class Juego extends AppCompatActivity {
 
                         //  j3.setEnabled(false);
                     }
-
                     if(movement.getMovJugador() == 4){
                         j4.setText("Balón");
                         j2.setText("jg2");
@@ -255,7 +170,6 @@ public class Juego extends AppCompatActivity {
 
                         // j4.setEnabled(false);
                     }
-
                     if(movement.getMovJugador() == 5){
                         j5.setText("Balón");
                         j2.setText("jg2");
@@ -274,7 +188,6 @@ public class Juego extends AppCompatActivity {
 
                         // j5.setEnabled(false);
                     }
-
                     if(movement.getMovJugador() == 6){
                         j6.setText("Balón");
                         j2.setText("jg2");
@@ -293,10 +206,9 @@ public class Juego extends AppCompatActivity {
 
                         // j6.setEnabled(false);
                     }
-
                     if(movement.getObj() == movement.getMovEnemigo()){
 
-                        Toast.makeText(Juego.this, "Ganasteeee", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Juego.this, "Ganasteeee :)", Toast.LENGTH_SHORT).show();
 
                         contGanadas++;
 
@@ -322,9 +234,8 @@ public class Juego extends AppCompatActivity {
 
                         start();
                     }
-
                     if(movement.getMovEnemigo()!= movement.getObj() && contRemate == 1){
-                        Toast.makeText(Juego.this, "Perdisteee, tremendo manco, sino es dificil", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Juego.this, "Perdisteee ):", Toast.LENGTH_SHORT).show();
 
                         contGanadas = 0;
 
@@ -380,11 +291,25 @@ public class Juego extends AppCompatActivity {
                 e4.setEnabled(false);
                 e5.setEnabled(false);
                 e6.setEnabled(false);
+
+                e1.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                e2.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                e3.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                e4.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                e5.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                e6.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+
+                j1.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                j2.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                j3.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                j4.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                j5.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                j6.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
             }
 
 
         });
-
+    //Habilitar los pases
         btnPase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -396,6 +321,17 @@ public class Juego extends AppCompatActivity {
                     j3.setEnabled(false);
                     j5.setEnabled(false);
                     j6.setEnabled(false);
+
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+
+
+                    //j4.setButtonTintList(Color.parseColor("#00722e"));
+                    //j2.setButtonTintList(ColorStateList.valueOf("#00722e"));
                 }
                 if(j2.isChecked()){
                     j1.setEnabled(true);
@@ -405,8 +341,14 @@ public class Juego extends AppCompatActivity {
                     j2.setEnabled(false);
                     j4.setEnabled(false);
                     j6.setEnabled(false);
-                }
 
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                }
                 if(j3.isChecked()){
                     j6.setEnabled(true);
                     j2.setEnabled(true);
@@ -415,8 +357,14 @@ public class Juego extends AppCompatActivity {
                     j3.setEnabled(false);
                     j4.setEnabled(false);
                     j5.setEnabled(false);
-                }
 
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                }
                 if(j4.isChecked()){
                     j1.setEnabled(true);
                     j5.setEnabled(true);
@@ -425,8 +373,14 @@ public class Juego extends AppCompatActivity {
                     j3.setEnabled(false);
                     j4.setEnabled(false);
                     j6.setEnabled(false);
-                }
 
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                }
                 if(j5.isChecked()){
                     j4.setEnabled(true);
                     j6.setEnabled(true);
@@ -435,8 +389,14 @@ public class Juego extends AppCompatActivity {
                     j1.setEnabled(false);
                     j3.setEnabled(false);
                     j5.setEnabled(false);
-                }
 
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                }
                 if(j6.isChecked()){
                     j5.setEnabled(true);
                     j3.setEnabled(true);
@@ -445,10 +405,17 @@ public class Juego extends AppCompatActivity {
                     j2.setEnabled(false);
                     j4.setEnabled(false);
                     j6.setEnabled(false);
+
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
                 }
             }
         });
-
+    //Habilitar los acomodos
         btnAcomodo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -460,6 +427,13 @@ public class Juego extends AppCompatActivity {
                     j2.setEnabled(false);
                     j4.setEnabled(false);
                     j6.setEnabled(false);
+
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
                 }
                 if(j2.isChecked()){
                     j4.setEnabled(true);
@@ -469,8 +443,14 @@ public class Juego extends AppCompatActivity {
                     j2.setEnabled(false);
                     j3.setEnabled(false);
                     j5.setEnabled(false);
-                }
 
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                }
                 if(j3.isChecked()){
                     j5.setEnabled(true);
                     j1.setEnabled(true);
@@ -479,8 +459,14 @@ public class Juego extends AppCompatActivity {
                     j3.setEnabled(false);
                     j4.setEnabled(false);
                     j6.setEnabled(false);
-                }
 
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                }
                 if(j4.isChecked()){
                     j6.setEnabled(true);
                     j2.setEnabled(true);
@@ -489,8 +475,14 @@ public class Juego extends AppCompatActivity {
                     j3.setEnabled(false);
                     j4.setEnabled(false);
                     j5.setEnabled(false);
-                }
 
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                }
                 if(j5.isChecked()){
                     j1.setEnabled(true);
                     j3.setEnabled(true);
@@ -499,8 +491,14 @@ public class Juego extends AppCompatActivity {
                     j4.setEnabled(false);
                     j5.setEnabled(false);
                     j6.setEnabled(false);
-                }
 
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                }
                 if(j6.isChecked()){
                     j4.setEnabled(true);
                     j2.setEnabled(true);
@@ -509,10 +507,17 @@ public class Juego extends AppCompatActivity {
                     j3.setEnabled(false);
                     j5.setEnabled(false);
                     j6.setEnabled(false);
+
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
                 }
             }
         });
-
+    //Habilitar los remates
         btnRemate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -528,8 +533,21 @@ public class Juego extends AppCompatActivity {
                     j4.setEnabled(false);
                     j5.setEnabled(false);
                     j6.setEnabled(false);
-                }
 
+                    e1.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    e2.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e3.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e4.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e5.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e6.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                }
                 if(j2.isChecked()){
                     e2.setEnabled(true);
 
@@ -539,8 +557,21 @@ public class Juego extends AppCompatActivity {
                     j4.setEnabled(false);
                     j5.setEnabled(false);
                     j6.setEnabled(false);
-                }
 
+                    e1.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e2.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    e3.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e4.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e5.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e6.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                }
                 if(j3.isChecked()){
                     e3.setEnabled(true);
 
@@ -550,8 +581,21 @@ public class Juego extends AppCompatActivity {
                     j4.setEnabled(false);
                     j5.setEnabled(false);
                     j6.setEnabled(false);
-                }
 
+                    e1.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e2.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e3.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    e4.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e5.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e6.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                }
                 if(j4.isChecked()){
                     e4.setEnabled(true);
                     e2.setEnabled(true);
@@ -562,8 +606,21 @@ public class Juego extends AppCompatActivity {
                     j4.setEnabled(false);
                     j5.setEnabled(false);
                     j6.setEnabled(false);
-                }
 
+                    e1.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e2.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    e3.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e4.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    e5.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e6.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                }
                 if(j5.isChecked()){
                     e5.setEnabled(true);
                     e1.setEnabled(true);
@@ -575,8 +632,21 @@ public class Juego extends AppCompatActivity {
                     j4.setEnabled(false);
                     j5.setEnabled(false);
                     j6.setEnabled(false);
-                }
 
+                    e1.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    e2.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e3.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    e4.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e5.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    e6.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                }
                 if(j6.isChecked()){
                     e6.setEnabled(true);
                     e2.setEnabled(true);
@@ -587,6 +657,20 @@ public class Juego extends AppCompatActivity {
                     j4.setEnabled(false);
                     j5.setEnabled(false);
                     j6.setEnabled(false);
+
+                    e1.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e2.setButtonTintList(getResources().getColorStateList(R.color.verde));
+                    e3.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e4.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e5.setButtonTintList(getResources().getColorStateList(R.color.rojo));
+                    e6.setButtonTintList(getResources().getColorStateList(R.color.verde));
+
+                    j1.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j2.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j3.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j4.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j5.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
+                    j6.setButtonTintList(getResources().getColorStateList(R.color.purple_200));
                 }
             }
         });
@@ -639,6 +723,7 @@ public class Juego extends AppCompatActivity {
         }
     }
 
+    //Comienza el juego
     public void start(){
 
         Random random = new Random();
@@ -773,14 +858,14 @@ public class Juego extends AppCompatActivity {
 
 
     }
-
+    //Actualiza puntuacion en la base de datos
     private void guardarResultado(String key, int score){
         HashMap<String, Object> hashMap = new HashMap<>();
         hashMap.put(key, score);
         JUGADORES.child(user.getUid()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(Juego.this, "El puntuaje ha sido actualizado", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Juego.this, "Nuevo record", Toast.LENGTH_SHORT).show();
             }
         });
     }
